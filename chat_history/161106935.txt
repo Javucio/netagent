@@ -25,3 +25,23 @@ Bot: Sí, hay varios protocolos más modernos que se utilizan en la capa de apli
 - QUIC (Quick UDP Internet Connection): un protocolo de comunicación para la transferencia de datos en la web.
 
 Es importante mencionar que estos protocolos pueden variar dependiendo del tipo de aplicación y del tipo de datos que se estén enviando. Los protocolos más modernos suelen tener características como la seguridad, la autenticación y la autorización, para garantizar la integridad y la confidencialidad de los datos.
+Usuario: similar al modelo OSI me refiero, dame mas opciones
+Bot: - SSH (Secure Shell): un protocolo de conexión remota a servidores.
+- SFTP (Secure File Transfer Protocol): un protocolo de transferencia de archivos seguro.
+- FTPS (File Transfer Protocol Secure): un protocolo de transferencia de archivos seguro.
+- MQTT (Message Queuing Telemetry Transport): un protocolo de comunicación de dispositivos IoT.
+- CoAP (Constrained Application Protocol): un protocolo de comunicación para dispositivos IoT.
+- WebSocket: un protocolo de comunicación en tiempo real para la web.
+- QUIC (Quick UDP Internet Connection): un protocolo de comunicación para la transferencia de datos en la web.
+- SSL/TLS (Secure Sockets Layer/Transport Layer Security): un protocolo de seguridad para la comunicación en la web.
+- HTTPS (Hypertext Transfer Protocol Secure): un protocolo de transferencia de datos seguro para la web.
+- SCP (Secure Copy): un protocolo de copia de archivos seguro.
+- RDP (Remote Desktop Protocol): un protocolo de conexión remota a servidores para acceder a una sesión de escritorio.
+- VNC (Virtual Network Computing): un protocolo de conexión remota a servidores para acceder a una sesión de escritorio.
+- Telnet: un protocolo de conexión remota a servidores para acceder a una sesión de comandos.
+- SMTP (Simple Mail Transfer Protocol): un protocolo de transferencia de correos electrónicos.
+- POP3 (Post Office Protocol version 3): un protocolo de recepción de correos electrónicos.
+- IMAP (Internet Message Access Protocol): un protocolo de acceso a correos electrónicos.
+- DNS (Domain Name System): un protocolo de resolución de nombres de dominio.
+- DHCP (Dynamic Host Configuration Protocol): un protocolo de configuración dinámica de direcciones IP.
+- NTP (Network Time Protocol): un
