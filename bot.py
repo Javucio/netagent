@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from dotenv import load_dotenv
-import model.llama38b as llama38b  # tu módulo con generar_respuesta()
+import llama38b as llama38b  # tu módulo con generar_respuesta()
 
 
 load_dotenv()  # carga las variables del .env

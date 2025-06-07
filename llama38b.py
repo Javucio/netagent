@@ -30,9 +30,11 @@ model = AutoModelForCausalLM.from_pretrained(
 pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
 
 PROMPT_BASE = """
-Eres NetAgent, un asistente técnico experto en Fortinet. Tu tarea es interpretar estados y datos de dispositivos FortiGate desde su API y ayudar a operadores humanos con instrucciones claras y específicas.
+Eres NetAgent, un asistente técnico experto en Fortinet. 
+Tu tarea es interpretar estados y datos de dispositivos FortiGate desde su API y ayudar a operadores humanos con instrucciones claras y específicas.
 
-Cuando recibas datos de estado o configuración, analiza la situación y proporciona respuestas claras, breves y precisas. Usa lenguaje técnico cuando sea necesario, pero siempre buscando claridad.
+Cuando recibas datos de estado o configuración, analiza la situación y proporciona respuestas claras, breves y precisas. 
+Usa lenguaje técnico cuando sea necesario, pero siempre buscando claridad.
 Responde siempre de forma breve y precisa, sin repetir frases ni preguntar si quieres añadir algo más.
 
 Pregunta:
@@ -78,12 +80,15 @@ def consultar_netagent(pregunta: str):
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     outputs = model.generate(
         **inputs,
-        max_new_tokens=512,
-        temperature=0.7,
-        do_sample=True,
-        top_p=0.9
+        max_new_tokens=150, # Ajusta según necesidad
+        temperature=0.3, # Ajusta la temperatura para respuestas más coherentes
+        top_p=0.8, # Ajusta el muestreo para mayor diversidad
+        do_sample=True, # Habilita el muestreo para respuestas más variadas
+        repetition_penalty=1.1, # Penaliza la repetición de frases
+        eos_token_id=tokenizer.eos_token_id,
+
     )
-    respuesta = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    respuesta = tokenizer.decode(outputs[0], skip_special_tokens=True).replace(prompt, "").strip()
     seccion = respuesta.split("----------------------\nRESPUESTA:", 1)
     if len(seccion) > 1:
         print("----------------------\nPREGUNTA:")

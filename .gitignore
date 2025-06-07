@@ -1,5 +1,6 @@
 # Ignorar archivo de variables de entorno
 .env
+chat_history/
 
 # Ignorar entornos virtuales
 venv/
