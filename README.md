@@ -1,4 +1,4 @@
-netagent
+Nnetagent
 Agente inteligente para operar dispositivos FortiGate mediante lenguaje natural.
 Combina llamadas API a FortiGate con un LLM tuneado para entender y responder en “lenguaje Forti”, facilitando la gestión y análisis en tiempo real.
 

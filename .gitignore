@@ -1,0 +1,19 @@
+# Ignorar archivo de variables de entorno
+.env
+
+# Ignorar entornos virtuales
+venv/
+consultor_venv/
+env/
+.env/
+
+# Ignorar archivos __pycache__
+__pycache__/
+*.pyc
+
+# Ignorar logs
+*.log
+
+# Ignorar datos sensibles o temporales
+*.sqlite3
+.DS_Store
